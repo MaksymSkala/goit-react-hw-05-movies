@@ -11,7 +11,7 @@ const MovieDetails = () => {
   useEffect(() => {
     const { API_KEY, BASE_URL } = config;
     setBackLinHref(location.state?.from ?? '/movies');
-    
+    console.log(location.state?.from);
     fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`)
       .then((response) => response.json())
       .then((data) => {
