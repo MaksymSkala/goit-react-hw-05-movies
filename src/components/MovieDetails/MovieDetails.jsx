@@ -18,7 +18,7 @@ const MovieDetails = () => {
         setMovieDetails(data);
       })
       .catch((error) => console.error(error));
-  }, [movieId]);
+  }, [movieId, location.state?.from]);
 
   return (
     <S.MovieDetailsContainer>
